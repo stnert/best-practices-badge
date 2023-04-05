@@ -49,7 +49,7 @@ gem 'lograge', '0.12.0' # Simplify logs
 gem 'mail', '2.7.1' # Ruby mail handler
 #
 gem 'octokit', '4.25.0' # GitHub's official Ruby API
-gem 'omniauth-github', '1.4.0' # Authentication to GitHub (get project info)
+gem 'omniauth-github', '2.0.0' # Authentication to GitHub (get project info)
 #
 # Counter CVE-2015-9284 in omniauth.  Unfortunately, at the time of this
 # writing the omniauth folks STILL have not fixed it (!). There is a shim
@@ -82,7 +82,7 @@ gem 'rack-headers_filter', '0.0.1' # Filter out "dangerous" headers
 gem 'railties', '6.1.7.3' # Rails. Rails core, loads rest of Rails
 gem 'rails-i18n', '6.0.0' # Localizations for Rails built-ins
 gem 'redcarpet', '3.5.1' # Process markdown in form textareas (justifications)
-gem 'sass-rails', '5.1.0', require: false # For .scss files (CSS extension)
+gem 'sass-rails', '6.0.0', require: false # For .scss files (CSS extension)
 gem 'scout_apm', '4.1.2' # Monitor for memory leaks
 gem 'secure_headers', '6.3.4' # Add hardening measures to HTTP headers
 # WARNING!!!!
