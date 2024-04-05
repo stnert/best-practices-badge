@@ -15,9 +15,9 @@ ruby File.read('.ruby-version').strip
 # sure to upgrade them in sync, *including* railties.
 # Loading only what we use reduces memory use & attack surface.
 # gem 'actioncable' # Not used. Client/server comm channel.
-gem 'actionmailer', '6.1.7.3' # Rails. Send email.
-gem 'actionpack', '6.1.7.3' # Rails. MVC framework.
-gem 'actionview', '6.1.7.3' # Rails. View.
+gem 'actionmailer', '7.0.8.1' # Rails. Send email.
+gem 'actionpack', '7.0.8.1' # Rails. MVC framework.
+gem 'actionview', '6.1.7.4' # Rails. View.
 gem 'activejob', '6.1.7.3' # Rails. Async jobs.
 gem 'activemodel', '6.1.7.3' # Rails. Model basics.
 gem 'activerecord', '6.1.7.3' # Rails. ORM and query system.
@@ -38,18 +38,18 @@ gem 'faraday-retry', '2.0.0' # Force retry of faraday requests for reliability
 # They recommend switching to the "fastly" gem (aka "fastly-ruby"),
 # but fastly-ruby is not designed to support multi-threading, so we
 # call the Fastly API directly instead.
-gem 'font-awesome-rails', '4.7.0.7'
+gem 'font-awesome-rails', '4.7.0.8'
 gem 'http_accept_language', '2.1.1' # Determine user's preferred locale
 gem 'httparty', '0.21.0' # HTTP convenience. rake fix_use_gravatar
 gem 'imagesLoaded_rails', '4.1.0' # JavaScript - enable wait for image load
 gem 'jbuilder', '2.11.5' # Template mechanism for JSON format results
-gem 'jquery-rails', '4.4.0' # JavaScript jQuery library (for Rails)
-gem 'jquery-ui-rails', '6.0.1' # JavaScript jQueryUI library (for Rails)
-gem 'lograge', '0.12.0' # Simplify logs
+gem 'jquery-rails', '4.5.0' # JavaScript jQuery library (for Rails)
+gem 'jquery-ui-rails', '7.0.0' # JavaScript jQueryUI library (for Rails)
+gem 'lograge', '0.13.0' # Simplify logs
 gem 'mail', '2.7.1' # Ruby mail handler
 #
 gem 'octokit', '4.25.0' # GitHub's official Ruby API
-gem 'omniauth-github', '1.4.0' # Authentication to GitHub (get project info)
+gem 'omniauth-github', '2.0.0' # Authentication to GitHub (get project info)
 #
 # Counter CVE-2015-9284 in omniauth.  Unfortunately, at the time of this
 # writing the omniauth folks STILL have not fixed it (!). There is a shim
@@ -64,25 +64,25 @@ gem 'omniauth-github', '1.4.0' # Authentication to GitHub (get project info)
 # However, using a git reference busts CI pipeline caching, slowing down
 # all testing, and over time we've become more comfortable that this is
 # the "standard way to resolve this issue".
-gem 'omniauth-rails_csrf_protection', '0.1.2' # Counter CVE-2015-9284
+gem 'omniauth-rails_csrf_protection', '1.0.0' # Counter CVE-2015-9284
 gem 'pagy', '5.10.1' # Paginate some views
 gem 'paleta', '0.3.0' # Color manipulation, used for badges
-gem 'paper_trail', '12.3.0' # Record previous versions of project data
+gem 'paper_trail', '13.0.0' # Record previous versions of project data
 gem 'pg', '1.4.1' # PostgreSQL database, used for data storage
 gem 'pg_search', '2.3.6' # PostgreSQL full-text search
 gem 'puma', '6.0.2' # Faster webserver; recommended by Heroku
 gem 'puma_worker_killer', '0.3.1' # Band-aid: Restart to limit memory use
-gem 'rack-attack', '6.6.1' # Implement rate limiting
-gem 'rack-cors', '1.1.1' # Enable CORS so JavaScript clients can get JSON
+gem 'rack-attack', '6.7.0' # Implement rate limiting
+gem 'rack-cors', '2.0.0' # Enable CORS so JavaScript clients can get JSON
 gem 'rack-headers_filter', '0.0.1' # Filter out "dangerous" headers
 # We no longer say: gem 'rails', '6.1.7.1' # Our web framework
 # but instead load only what we use (to reduce memory use and attack surface).
 # We load sprockets-rails, but its version number isn't kept in sync.
 # Note: Update the gem versions of action* and railties in sync.
-gem 'railties', '6.1.7.3' # Rails. Rails core, loads rest of Rails
-gem 'rails-i18n', '6.0.0' # Localizations for Rails built-ins
+gem 'railties', '7.0.8.1' # Rails. Rails core, loads rest of Rails
+gem 'rails-i18n', '7.0.1' # Localizations for Rails built-ins
 gem 'redcarpet', '3.5.1' # Process markdown in form textareas (justifications)
-gem 'sass-rails', '5.1.0', require: false # For .scss files (CSS extension)
+gem 'sass-rails', '6.0.0', require: false # For .scss files (CSS extension)
 gem 'scout_apm', '4.1.2' # Monitor for memory leaks
 gem 'secure_headers', '6.3.4' # Add hardening measures to HTTP headers
 # WARNING!!!!
@@ -97,7 +97,7 @@ group :development, :test do
   gem 'awesome_print', '1.9.2' # Pretty print Ruby objects
   gem 'bullet', '7.0.2' # Avoid n+1 queries
   gem 'bundler-audit', '0.9.1'
-  gem 'dotenv-rails', '2.7.6'
+  gem 'dotenv-rails', '2.8.0'
   gem 'eslintrb', '2.1.0'
   gem 'json', '2.6.2'
   gem 'license_finder', '7.0.1'
@@ -112,7 +112,7 @@ group :development, :test do
   # gem 'railroader', '4.3.8' # Security static analyzer. OSS fork of Brakeman
   gem 'rubocop', '1.41.1', require: false # Style checker
   gem 'rubocop-performance', '1.15.1', require: false # Performance cops
-  gem 'rubocop-rails', '2.17.3', require: false # Rails-specific cops
+  gem 'rubocop-rails', '2.17.4', require: false # Rails-specific cops
   gem 'ruby-graphviz', '1.2.5' # This is used for bundle viz
   gem 'spring', '4.0.0' # Preloads app so console, rake, and tests run faster
   # Do NOT upgrade to vcr 6.*, as that is not OSS:
@@ -135,9 +135,9 @@ group :development do
   # We bring in full rails in development in case we need it for debugging;
   # this also keeps some gems happy that don't realize that loading
   # only *parts* of Rails is fine:
-  gem 'rails', '6.1.7.3' # Rails (our web framework)
+  gem 'rails', '7.0.8.1' # Rails (our web framework)
   gem 'translation', '1.32' # translation.io - translation service
-  gem 'web-console', '4.2.0' # In-browser debugger; use <% console %> or console
+  gem 'web-console', '4.2.1' # In-browser debugger; use <% console %> or console
 end
 
 group :test do
@@ -149,7 +149,7 @@ group :test do
   gem 'rails-controller-testing', '1.0.5' # for `assigns` and `assert_template`
   gem 'selenium-webdriver', '3.142.7', require: false
   # We don't list "simplecov"; code depends on it & brings it in
-  gem 'webdrivers', '4.6.1', require: false
+  gem 'webdrivers', '4.7.0', require: false
   gem 'webmock', '3.14.0', require: false
 end
 
