@@ -100,19 +100,19 @@ group :development, :test do
   gem 'dotenv-rails', '2.7.6'
   gem 'eslintrb', '2.1.0'
   gem 'json', '2.6.2'
-  gem 'license_finder', '7.0.1'
-  gem 'mdl', '0.11.0'
+  gem 'license_finder', '7.1.0'
+  gem 'mdl', '0.12.0'
   # NOTE: If you update pronto you may need to update other pronto-* gems
-  gem 'pronto', '0.11.0'
+  gem 'pronto', '0.11.1'
   # TODO: Use pronto-railroader, once there is one.
   # gem 'pronto-brakeman', '0.9.1'
-  gem 'pronto-eslint', '0.11.0'
+  gem 'pronto-eslint', '0.11.1'
   gem 'pronto-rails_best_practices', '0.11.0'
-  gem 'pronto-rubocop', '0.11.3'
+  gem 'pronto-rubocop', '0.11.4'
   # gem 'railroader', '4.3.8' # Security static analyzer. OSS fork of Brakeman
-  gem 'rubocop', '1.41.1', require: false # Style checker
-  gem 'rubocop-performance', '1.15.1', require: false # Performance cops
-  gem 'rubocop-rails', '2.17.3', require: false # Rails-specific cops
+  gem 'rubocop', '1.42.0', require: false # Style checker
+  gem 'rubocop-performance', '1.15.2', require: false # Performance cops
+  gem 'rubocop-rails', '2.17.4', require: false # Rails-specific cops
   gem 'ruby-graphviz', '1.2.5' # This is used for bundle viz
   gem 'spring', '4.0.0' # Preloads app so console, rake, and tests run faster
   # Do NOT upgrade to vcr 6.*, as that is not OSS:
@@ -150,7 +150,7 @@ group :test do
   gem 'selenium-webdriver', '3.142.7', require: false
   # We don't list "simplecov"; code depends on it & brings it in
   gem 'webdrivers', '4.6.1', require: false
-  gem 'webmock', '3.14.0', require: false
+  gem 'webmock', '3.15.1', require: false
 end
 
 group :production do
