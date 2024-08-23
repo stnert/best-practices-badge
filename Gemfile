@@ -38,14 +38,14 @@ gem 'faraday-retry', '2.0.0' # Force retry of faraday requests for reliability
 # They recommend switching to the "fastly" gem (aka "fastly-ruby"),
 # but fastly-ruby is not designed to support multi-threading, so we
 # call the Fastly API directly instead.
-gem 'font-awesome-rails', '4.7.0.7'
+gem 'font-awesome-rails', '4.7.0.8'
 gem 'http_accept_language', '2.1.1' # Determine user's preferred locale
 gem 'httparty', '0.21.0' # HTTP convenience. rake fix_use_gravatar
 gem 'imagesLoaded_rails', '4.1.0' # JavaScript - enable wait for image load
-gem 'jbuilder', '2.11.5' # Template mechanism for JSON format results
-gem 'jquery-rails', '4.4.0' # JavaScript jQuery library (for Rails)
-gem 'jquery-ui-rails', '6.0.1' # JavaScript jQueryUI library (for Rails)
-gem 'lograge', '0.12.0' # Simplify logs
+gem 'jbuilder', '2.12.0' # Template mechanism for JSON format results
+gem 'jquery-rails', '4.5.0' # JavaScript jQuery library (for Rails)
+gem 'jquery-ui-rails', '7.0.0' # JavaScript jQueryUI library (for Rails)
+gem 'lograge', '0.13.0' # Simplify logs
 gem 'mail', '2.7.1' # Ruby mail handler
 #
 gem 'octokit', '4.25.0' # GitHub's official Ruby API
@@ -64,7 +64,7 @@ gem 'omniauth-github', '1.4.0' # Authentication to GitHub (get project info)
 # However, using a git reference busts CI pipeline caching, slowing down
 # all testing, and over time we've become more comfortable that this is
 # the "standard way to resolve this issue".
-gem 'omniauth-rails_csrf_protection', '0.1.2' # Counter CVE-2015-9284
+gem 'omniauth-rails_csrf_protection', '1.0.0' # Counter CVE-2015-9284
 gem 'pagy', '5.10.1' # Paginate some views
 gem 'paleta', '0.3.0' # Color manipulation, used for badges
 gem 'paper_trail', '12.3.0' # Record previous versions of project data
@@ -80,7 +80,7 @@ gem 'rack-headers_filter', '0.0.1' # Filter out "dangerous" headers
 # We load sprockets-rails, but its version number isn't kept in sync.
 # Note: Update the gem versions of action* and railties in sync.
 gem 'railties', '6.1.7.3' # Rails. Rails core, loads rest of Rails
-gem 'rails-i18n', '6.0.0' # Localizations for Rails built-ins
+gem 'rails-i18n', '7.0.1' # Localizations for Rails built-ins
 gem 'redcarpet', '3.5.1' # Process markdown in form textareas (justifications)
 gem 'sass-rails', '5.1.0', require: false # For .scss files (CSS extension)
 gem 'scout_apm', '4.1.2' # Monitor for memory leaks
@@ -90,29 +90,29 @@ gem 'secure_headers', '6.3.4' # Add hardening measures to HTTP headers
 # The gem sprockets-rails version 3.4.1 (from 3.2.2) caused a regression
 # in deployment (icons no longer displayed) that does NOT occur locally.
 # WARNING!!!!
-gem 'sprockets-rails', '3.4.2' # Rails. Asset precompilation
+gem 'sprockets-rails', '3.5.0' # Rails. Asset precompilation
 gem 'uglifier', '4.2.0', require: false # Minify JavaScript
 
 group :development, :test do
   gem 'awesome_print', '1.9.2' # Pretty print Ruby objects
   gem 'bullet', '7.0.2' # Avoid n+1 queries
   gem 'bundler-audit', '0.9.1'
-  gem 'dotenv-rails', '2.7.6'
+  gem 'dotenv-rails', '2.8.0'
   gem 'eslintrb', '2.1.0'
   gem 'json', '2.6.2'
-  gem 'license_finder', '7.0.1'
-  gem 'mdl', '0.11.0'
+  gem 'license_finder', '7.1.0'
+  gem 'mdl', '0.12.0'
   # NOTE: If you update pronto you may need to update other pronto-* gems
-  gem 'pronto', '0.11.0'
+  gem 'pronto', '0.11.1'
   # TODO: Use pronto-railroader, once there is one.
   # gem 'pronto-brakeman', '0.9.1'
-  gem 'pronto-eslint', '0.11.0'
+  gem 'pronto-eslint', '0.11.1'
   gem 'pronto-rails_best_practices', '0.11.0'
-  gem 'pronto-rubocop', '0.11.3'
+  gem 'pronto-rubocop', '0.11.4'
   # gem 'railroader', '4.3.8' # Security static analyzer. OSS fork of Brakeman
-  gem 'rubocop', '1.41.1', require: false # Style checker
-  gem 'rubocop-performance', '1.15.1', require: false # Performance cops
-  gem 'rubocop-rails', '2.17.3', require: false # Rails-specific cops
+  gem 'rubocop', '1.42.0', require: false # Style checker
+  gem 'rubocop-performance', '1.15.2', require: false # Performance cops
+  gem 'rubocop-rails', '2.17.4', require: false # Rails-specific cops
   gem 'ruby-graphviz', '1.2.5' # This is used for bundle viz
   gem 'spring', '4.0.0' # Preloads app so console, rake, and tests run faster
   # Do NOT upgrade to vcr 6.*, as that is not OSS:
@@ -137,7 +137,7 @@ group :development do
   # only *parts* of Rails is fine:
   gem 'rails', '6.1.7.3' # Rails (our web framework)
   gem 'translation', '1.32' # translation.io - translation service
-  gem 'web-console', '4.2.0' # In-browser debugger; use <% console %> or console
+  gem 'web-console', '4.2.1' # In-browser debugger; use <% console %> or console
 end
 
 group :test do
@@ -150,7 +150,7 @@ group :test do
   gem 'selenium-webdriver', '3.142.7', require: false
   # We don't list "simplecov"; code depends on it & brings it in
   gem 'webdrivers', '4.6.1', require: false
-  gem 'webmock', '3.14.0', require: false
+  gem 'webmock', '3.15.1', require: false
 end
 
 group :production do
