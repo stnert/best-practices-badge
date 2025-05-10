@@ -26,7 +26,7 @@ gem 'activesupport', '6.1.7.3' # Rails. Underlying library.
 # gem 'activetext' # Not used. Text editor that fails to support markdown.
 gem 'attr_encrypted', '3.1.0' # Encrypt email addresses
 gem 'bcrypt', '3.1.18' # Security - for salted hashed interated passwords
-gem 'blind_index', '2.3.0' # Index encrypted email addresses
+gem 'blind_index', '2.7.0' # Index encrypted email addresses
 gem 'bootstrap-sass', '3.4.1'
 gem 'bootstrap-social-rails', '4.12.0'
 gem 'bootstrap_form', '2.7.0'
@@ -82,7 +82,7 @@ gem 'rack-headers_filter', '0.0.1' # Filter out "dangerous" headers
 gem 'railties', '6.1.7.3' # Rails. Rails core, loads rest of Rails
 gem 'rails-i18n', '6.0.0' # Localizations for Rails built-ins
 gem 'redcarpet', '3.5.1' # Process markdown in form textareas (justifications)
-gem 'sass-rails', '5.1.0', require: false # For .scss files (CSS extension)
+gem 'sass-rails', '6.0.0', require: false # For .scss files (CSS extension)
 gem 'scout_apm', '4.1.2' # Monitor for memory leaks
 gem 'secure_headers', '6.3.4' # Add hardening measures to HTTP headers
 # WARNING!!!!
@@ -135,7 +135,7 @@ group :development do
   # We bring in full rails in development in case we need it for debugging;
   # this also keeps some gems happy that don't realize that loading
   # only *parts* of Rails is fine:
-  gem 'rails', '6.1.7.3' # Rails (our web framework)
+  gem 'rails', '7.0.0' # Rails (our web framework)
   gem 'translation', '1.32' # translation.io - translation service
   gem 'web-console', '4.2.0' # In-browser debugger; use <% console %> or console
 end
