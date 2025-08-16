@@ -20,7 +20,7 @@ gem 'actionpack', '6.1.7.3' # Rails. MVC framework.
 gem 'actionview', '6.1.7.3' # Rails. View.
 gem 'activejob', '6.1.7.3' # Rails. Async jobs.
 gem 'activemodel', '6.1.7.3' # Rails. Model basics.
-gem 'activerecord', '6.1.7.3' # Rails. ORM and query system.
+gem 'activerecord', '7.1.5.2' # Rails. ORM and query system.
 # gem 'activestorage' # Not used. Attaches cloud files to ActiveRecord.
 gem 'activesupport', '6.1.7.3' # Rails. Underlying library.
 # gem 'activetext' # Not used. Text editor that fails to support markdown.
@@ -67,9 +67,9 @@ gem 'omniauth-github', '1.4.0' # Authentication to GitHub (get project info)
 gem 'omniauth-rails_csrf_protection', '0.1.2' # Counter CVE-2015-9284
 gem 'pagy', '5.10.1' # Paginate some views
 gem 'paleta', '0.3.0' # Color manipulation, used for badges
-gem 'paper_trail', '12.3.0' # Record previous versions of project data
+gem 'paper_trail', '13.0.0' # Record previous versions of project data
 gem 'pg', '1.4.1' # PostgreSQL database, used for data storage
-gem 'pg_search', '2.3.6' # PostgreSQL full-text search
+gem 'pg_search', '2.3.7' # PostgreSQL full-text search
 gem 'puma', '6.0.2' # Faster webserver; recommended by Heroku
 gem 'puma_worker_killer', '0.3.1' # Band-aid: Restart to limit memory use
 gem 'rack-attack', '6.6.1' # Implement rate limiting
@@ -135,7 +135,7 @@ group :development do
   # We bring in full rails in development in case we need it for debugging;
   # this also keeps some gems happy that don't realize that loading
   # only *parts* of Rails is fine:
-  gem 'rails', '6.1.7.3' # Rails (our web framework)
+  gem 'rails', '7.1.5.2' # Rails (our web framework)
   gem 'translation', '1.32' # translation.io - translation service
   gem 'web-console', '4.2.0' # In-browser debugger; use <% console %> or console
 end
