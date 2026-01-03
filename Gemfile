@@ -40,7 +40,7 @@ gem 'faraday-retry', '2.0.0' # Force retry of faraday requests for reliability
 # call the Fastly API directly instead.
 gem 'font-awesome-rails', '4.7.0.7'
 gem 'http_accept_language', '2.1.1' # Determine user's preferred locale
-gem 'httparty', '0.21.0' # HTTP convenience. rake fix_use_gravatar
+gem 'httparty', '0.24.0' # HTTP convenience. rake fix_use_gravatar
 gem 'imagesLoaded_rails', '4.1.0' # JavaScript - enable wait for image load
 gem 'jbuilder', '2.11.5' # Template mechanism for JSON format results
 gem 'jquery-rails', '4.4.0' # JavaScript jQuery library (for Rails)
@@ -103,12 +103,12 @@ group :development, :test do
   gem 'license_finder', '7.0.1'
   gem 'mdl', '0.11.0'
   # NOTE: If you update pronto you may need to update other pronto-* gems
-  gem 'pronto', '0.11.0'
+  gem 'pronto', '0.11.1'
   # TODO: Use pronto-railroader, once there is one.
   # gem 'pronto-brakeman', '0.9.1'
-  gem 'pronto-eslint', '0.11.0'
+  gem 'pronto-eslint', '0.11.1'
   gem 'pronto-rails_best_practices', '0.11.0'
-  gem 'pronto-rubocop', '0.11.3'
+  gem 'pronto-rubocop', '0.11.4'
   # gem 'railroader', '4.3.8' # Security static analyzer. OSS fork of Brakeman
   gem 'rubocop', '1.41.1', require: false # Style checker
   gem 'rubocop-performance', '1.15.1', require: false # Performance cops
